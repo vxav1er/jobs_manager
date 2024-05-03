@@ -8,6 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
@@ -22,8 +23,10 @@ public class CandidateEntity {
     private UUID id;
 
     private String name;
-    @Pattern(regexp = "\\s+", message = "The [username] field must not contain a space")
+    @NotBlank
+    @Pattern(regexp = "\\S+", message = "The [username] field must not contain a space")
     private String username;
+
     @Email(message = "The [email] field must contain a valid email address.")
     private String email;
 
