@@ -1,6 +1,7 @@
 package com.xavier.jobs_manager.modules.company.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -16,9 +17,10 @@ public class JobEntity {
     private UUID id;
     private String description;
     private String benefits;
-    private String leve;
+    @NotBlank()
+    private String level;
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "company_id", insertable = false, updatable = false)
     private CompanyEntity companyEntity;
 
