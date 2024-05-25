@@ -1,6 +1,5 @@
 package com.xavier.jobs_manager.exeptions;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

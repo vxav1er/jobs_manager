@@ -1,6 +1,5 @@
 package com.xavier.jobs_manager.modules.company.controllers;
 
-
 import com.xavier.jobs_manager.modules.company.entities.CompanyEntity;
 import com.xavier.jobs_manager.modules.company.services.CreateCompanyService;
 import jakarta.validation.Valid;

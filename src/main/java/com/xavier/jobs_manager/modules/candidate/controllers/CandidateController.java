@@ -1,9 +1,6 @@
 package com.xavier.jobs_manager.modules.candidate.controllers;
 
-
-import com.xavier.jobs_manager.exeptions.UserFoundException;
 import com.xavier.jobs_manager.modules.candidate.CandidateEntity;
-import com.xavier.jobs_manager.modules.candidate.CandidateRepository;
 import com.xavier.jobs_manager.modules.candidate.services.CreateCandidateService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
