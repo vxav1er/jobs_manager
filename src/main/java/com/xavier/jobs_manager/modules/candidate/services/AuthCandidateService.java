@@ -45,7 +45,7 @@ public class AuthCandidateService {
     var expiresIn = Instant.now().plus(Duration.ofMinutes(10));
 
     var token = JWT.create().withIssuer("jobs_manager").withExpiresAt(expiresIn)
-        .withSubject(candidate.getId().toString()).withClaim("roles", Arrays.asList("candidate")).sign(algorithm);
+        .withSubject(candidate.getId().toString()).withClaim("roles", Arrays.asList("CANDIDATE")).sign(algorithm);
 
     var authCadidateResponse = AuthCandidateResponseDTO.builder().access_token(token)
         .expires_in(expiresIn.toEpochMilli()).build();
